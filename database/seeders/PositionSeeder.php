@@ -13,6 +13,7 @@ class PositionSeeder extends Seeder
      */
     public function run(): void
     {
+
     DB::table('positions')->insert([
     [
     'code' => 'FE',
@@ -31,5 +32,5 @@ class PositionSeeder extends Seeder
     ],
     ]);
     }
-    
+
 }

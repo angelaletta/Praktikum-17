@@ -22,8 +22,12 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        return view('home');
-    }
+    public function index(EmployeeChart $chart)
+{
+     $pageTitle = 'Home';
+     return view('home',[
+            'pageTitle' => $pageTitle, 
+            'chart' => $chart->build()
+     ]);
+}
 }

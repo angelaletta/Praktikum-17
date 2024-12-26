@@ -33,3 +33,9 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::get('getEmployees', [EmployeeController::class, 'getData'])->name('employees.getData');
+
+Route::get('exportExcel', [EmployeeController::class, 'exportExcel'])->name('employees.exportExcel');
+
+Route::get('exportPdf', [EmployeeController::class, 'exportPdf'])->name('employees.exportPdf');
